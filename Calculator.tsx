@@ -65,3 +65,4 @@ const Calculator: React.FC<CalculatorProps> = ({ onCalculate }) => {
 };
 
 export default Calculator;
+
