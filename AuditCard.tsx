@@ -129,3 +129,4 @@ const AuditCard: React.FC<AuditCardProps> = ({ insight, onPrint }) => {
 
 export default AuditCard;
 
+
