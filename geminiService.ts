@@ -101,3 +101,4 @@ export const getBuddyResponse = async (userMessage: string, currentContext: Food
 
 };
 
+
