@@ -100,3 +100,4 @@ export const getBuddyResponse = async (userMessage: string, currentContext: Food
   return response.text || "I'm processing the data...";
 
 };
+
