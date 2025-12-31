@@ -34,4 +34,5 @@ export interface CalculationResult {
 export interface ProposalState {
   auditData: FoodserviceInsight;
   calcData: CalculationResult;
+
 }
