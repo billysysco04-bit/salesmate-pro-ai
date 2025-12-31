@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { FoodserviceInsight, CalculationResult, FlyerData } from './types';
 import { FOODSERVICE_DATA as INITIAL_DATA } from './constants';
-import { getDynamicAudit } from './services/geminiService';
-import Calculator from './components/Calculator';
-import AuditCard from './components/AuditCard';
-import Login from './components/Login';
-import BuddyChat from './components/BuddyChat';
-import AdminPanel from './components/AdminPanel';
-import FlyerPreview from './components/FlyerPreview';
+import { getDynamicAudit } from './geminiService';
+import Calculator from './Calculator';
+import AuditCard from './AuditCard';
+import Login from './Login';
+import BuddyChat from './BuddyChat';
+import AdminPanel from './AdminPanel';
+import FlyerPreview from './FlyerPreview';
 
 declare const html2pdf: any;
 
@@ -234,4 +234,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
