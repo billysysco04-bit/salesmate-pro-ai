@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FoodserviceInsight } from '../types';
+import { FoodserviceInsight } from './types';
 
 interface AdminPanelProps {
   onAddEntry: (entry: FoodserviceInsight) => void;
