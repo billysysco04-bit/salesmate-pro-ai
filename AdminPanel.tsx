@@ -126,3 +126,4 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onAddEntry, onClose }) => {
 };
 
 export default AdminPanel;
+
