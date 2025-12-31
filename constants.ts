@@ -87,4 +87,5 @@ export const FOODSERVICE_DATA: FoodserviceInsight[] = [
       tip: "Service is the product here. If their machine is down, their business is down. Sell the peace of mind.", 
       type: "category"
     }
+
 ];
