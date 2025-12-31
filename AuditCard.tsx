@@ -1,5 +1,5 @@
 import React from 'react';
-import { FoodserviceInsight } from '../types';
+import { FoodserviceInsight } from './types';
 
 interface AuditCardProps {
   insight: FoodserviceInsight;
@@ -31,7 +31,6 @@ const AuditCard: React.FC<AuditCardProps> = ({ insight, onPrint }) => {
         </h2>
       </div>
 
-      {/* Field Actions */}
       <div className="grid grid-cols-3 gap-4 mb-12 print:hidden">
         <a 
           href={insight.phone ? `tel:${insight.phone}` : '#'} 
@@ -89,7 +88,7 @@ const AuditCard: React.FC<AuditCardProps> = ({ insight, onPrint }) => {
       {insight.buddySuggestions && insight.buddySuggestions.length > 0 && (
         <div className="mb-12 space-y-6">
           <h4 className="font-black text-black uppercase text-sm tracking-[0.5em] border-b-4 border-black inline-block mb-4 pdf-avoid-break">Marketing & Visual Assets</h4>
-          {insight.buddySuggestions.map((suggestion, idx) => (
+          {insight.buddySuggestions.map((suggestion: any, idx: number) => (
             <div key={idx} className="bg-gray-50 p-8 border-4 border-dashed border-gray-400 relative pdf-avoid-break">
                <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-8 bg-black"></div>
               <p className="text-base font-bold text-black whitespace-pre-line leading-relaxed">{suggestion}</p>
@@ -103,12 +102,12 @@ const AuditCard: React.FC<AuditCardProps> = ({ insight, onPrint }) => {
           <span className="w-2 h-2 bg-[#ffcc00] mr-3 rounded-full animate-pulse"></span>
           Consultant Closing Note:
         </div>
-        <p className="text-2xl italic font-medium text-white leading-tight">"{insight.tip}"</p>
+        <p className="text-2xl italic font-medium text-white leading-tight">{`"${insight.tip}"`}</p>
       </div>
 
       <div className="mb-10 p-6 border-t-2 border-gray-200 pdf-avoid-break">
-        <p className="text-[11px] font-bold text-gray-900 leading-relaxed uppercase text-center italic font-medium">
-          Ownership and Rights Statement: This application and all of its components, including but not limited to the code, processes, models, and future versions, are fully owned and controlled by Billy James Harman. Billy James Harman retains all rights to own, control, distribute, and sell this application and its associated elements.
+        <p className="text-[11px] font-bold text-gray-900 leading-relaxed uppercase text-center italic">
+          Ownership and Rights Statement: This application and all of its components are fully owned and controlled by Billy James Harman.
         </p>
         <p className="text-[9px] font-black text-center uppercase tracking-[0.5em] text-black/40 mt-4">SALESMATE PRO AI | FIELD INTELLIGENCE 2025</p>
       </div>
@@ -117,18 +116,10 @@ const AuditCard: React.FC<AuditCardProps> = ({ insight, onPrint }) => {
         onClick={onPrint}
         className="w-full bg-[#d40000] text-white font-black py-6 hover:bg-black transition-all uppercase tracking-[0.4em] text-base flex items-center justify-center print:hidden italic border-b-8 border-black shadow-[8px_8px_0px_rgba(212,0,0,0.2)]"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
         Download Full Strategic Proposal
       </button>
     </div>
   );
 };
 
-
 export default AuditCard;
-
-
-
-
